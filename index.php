@@ -42,6 +42,10 @@
 			background-color:#eee;
 			border-radius:6px;
 		}
+		
+		.bs-callout-info {
+		  color:#5cb85c;
+		}
 	</style>
 
 </head>
@@ -58,7 +62,7 @@
     </div>
 		
     <div class="hero-unit">
-	<h1><?php echo getXkcdPassword(); ?></h1>
+	<h1 class="bs-callout-info"><?php echo getXkcdPassword(); ?></h1>
     </div>
 
 
