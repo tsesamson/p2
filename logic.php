@@ -11,11 +11,33 @@
     return $dic;
   }
 
-  function getXkcdPassword($numOfWords=4, $delimiter='-', $numOfSpecialChar=0, $addNum=false, $addSym=false, $isCamelCase=false, $isProperCase=false){
+  function getXkcdPassword($numOfWords=4, $delimiter='-', $addSpecialChar='', $addNum=false, $addSym=false, $isProperCase=false){
     $result = ''; //Define varibale for password result
     $dic = getDict();
-    $maxLength = 9;
+    $maxLength = 7;
     
+    //Check to see if this is a form submit request
+    if (!empty($_GET))
+    {
+      //Grab the options
+      
+      //Assign the value from the form if it is an integer
+      if(isset($_GET['numOfWords']) && is_numeric($_GET['numOfWords'])) {
+        $numOfWords = $_GET['numOfWords'];
+      }
+      
+      //Assign the value for demlimiter and make sure char is the length of 1
+      if(isset($_GET['delimiter']) && strlen($_GET['delimiter'])>=1) {
+        $delimiter = substr($_GET['delimiter'], 0, 1);
+      }
+      
+      //Assign the value for addSpecialChar and make sure char is the length of 1
+      if(isset($_GET['addSpecialChar']) && strlen($_GET['addSpecialChar'])>=1) {
+        $addSpecialChar = substr($_GET['addSpecialChar'], 0, 1);
+      }
+    }
+    
+    //Do not allow the number of words to go over maxlength
     if($numOfWords > $maxLength) {
       $numOfWords = $maxLength;
     }
@@ -31,7 +53,19 @@
         }
     }
     
+    //Inject a special char into the password if it is defined
+    if(strlen($addSpecialChar) == 1) {
+      $result = addSpecialChar($result, $addSpecialChar);
+    }
+    
     return $result;
+  }
+
+  //Function used to add special char in a random spot of the result string
+  function addSpecialChar($inputString, $specialChar) {
+    $randNum = rand(0, strlen($inputString));
+    
+    return substr($inputString, 0, $randNum) . $specialChar . substr($inputString, $randNum, strlen($inputString));
   }
 
 ?>

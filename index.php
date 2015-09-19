@@ -78,38 +78,38 @@
           <div class="panel-body">
             <div class="row">
               <div class="col-xs-4">
-                <label class="col-xs-12 control-label" for="formGroupInputLarge">Number of Words (Max 9)</label>
+                <label class="col-xs-12 control-label" for="formGroupInputLarge">Number of Words (Max 7)</label>
                 <div class="col-xs-12">
-                  <input type="text" class="form-control" name="numOfWords" value="4">
+                  <input type="text" class="form-control" name="numOfWords" value="<?php echo (isset($_GET['numOfWords']) ? $_GET['numOfWords']:'4'); ?>">
                 </div>
               </div>
               <div class="col-xs-4">
-                <label class="col-xs-12 control-label" for="formGroupInputLarge">Number of Special Char</label>
+                <label class="col-xs-12 control-label" for="formGroupInputLarge">Include a Special Character</label>
                 <div class="col-xs-12">
-                  <input <input type="text" class="form-control" name="numOfSpecialChar" value="0">
+                  <input <input type="text" class="form-control" name="addSpecialChar" value="<?php echo (isset($_GET['addSpecialChar']) ? $_GET['addSpecialChar']:null); ?>">
                 </div>
               </div>
               <div class="col-xs-4">
                 <label class="col-xs-12 control-label" for="formGroupInputLarge">Delimiter between words</label>
                 <div class="col-xs-12">
-                  <input <input type="text" class="form-control" name="delimiter" value="-">
+                  <input <input type="text" class="form-control" name="delimiter" value="<?php echo (isset($_GET['delimiter']) ? $_GET['delimiter']:'-'); ?>">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-xs-4">
                 <div class="checkbox">
-                  <label><input type="checkbox" name="addNum"> Add a Number</label>
+                  <label><input type="checkbox" name="addNum" <?php echo (isset($_GET['addNum'])  ? 'checked':''); ?>> Add a Number</label>
                 </div>
               </div>
               <div class="col-xs-4">
                 <div class="checkbox">
-                  <label><input type="checkbox" name="addSym"> Add a Symbol</label>
+                  <label><input type="checkbox" name="addSym" <?php echo (isset($_GET['addSym'])  ? 'checked':''); ?>> Add a Symbol</label>
                 </div>
               </div>
               <div class="col-xs-4">
                 <div class="checkbox">
-                  <label><input type="checkbox" name="isProperCase"> Proper Case</label>
+                  <label><input type="checkbox" name="isProperCase" <?php echo (isset($_GET['isProperCase'])  ? 'checked':''); ?>> Proper Case</label>
                 </div>
               </div>
             </div>
