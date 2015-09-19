@@ -65,7 +65,7 @@
 <form method="get" action="/">
     <div class="row">
       <div class="col-lg-12">
-        <button type="button" class="btn btn-info btn-lg btn-block">GENERATE PASSWORD</button>
+        <button type="submit" class="btn btn-info btn-lg btn-block">GENERATE PASSWORD</button>
       </div>
     </div>
 
