@@ -11,9 +11,14 @@
     return $dic;
   }
 
-  function getXkcdPassword($numOfWords=4, $delimiter='-', $numOfSpecialChar=0, $addNum=false, $addSym=false, $isCamelCase=false, $isProperCase=false, $maxLength=8){
+  function getXkcdPassword($numOfWords=4, $delimiter='-', $numOfSpecialChar=0, $addNum=false, $addSym=false, $isCamelCase=false, $isProperCase=false){
     $result = ''; //Define varibale for password result
     $dic = getDict();
+    $maxLength = 9;
+    
+    if($numOfWords > $maxLength) {
+      $numOfWords = $maxLength;
+    }
     
     //For loop to generate the password
     for($i = 0; $i <$numOfWords; $i++) {

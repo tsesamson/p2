@@ -76,15 +76,43 @@
             <h2 class="panel-title">Options</h2>
           </div>
           <div class="panel-body">
-              <div class="form-group">
-                <div class="checkbox">
-                  <label><input type="checkbox"> Add a Number</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox"> Add a Symbol</label>
+            <div class="row">
+              <div class="col-xs-4">
+                <label class="col-xs-12 control-label" for="formGroupInputLarge">Number of Words (Max 9)</label>
+                <div class="col-xs-12">
+                  <input type="text" class="form-control" name="numOfWords" value="4">
                 </div>
               </div>
-
+              <div class="col-xs-4">
+                <label class="col-xs-12 control-label" for="formGroupInputLarge">Number of Special Char</label>
+                <div class="col-xs-12">
+                  <input <input type="text" class="form-control" name="numOfSpecialChar" value="0">
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <label class="col-xs-12 control-label" for="formGroupInputLarge">Delimiter between words</label>
+                <div class="col-xs-12">
+                  <input <input type="text" class="form-control" name="delimiter" value="-">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">
+                <div class="checkbox">
+                  <label><input type="checkbox" name="addNum"> Add a Number</label>
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <div class="checkbox">
+                  <label><input type="checkbox" name="addSym"> Add a Symbol</label>
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <div class="checkbox">
+                  <label><input type="checkbox" name="isProperCase"> Proper Case</label>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
