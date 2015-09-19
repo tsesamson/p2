@@ -1,3 +1,9 @@
+<?php 
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+  require_once('logic.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +21,7 @@
 		}
 	
 		.container {
-			width:50%;
+			width:80%;
 			min-width:600px;
 			margin-bottom:50px;
 		}	
@@ -25,6 +31,7 @@
 			margin:auto;
 			width:50%;
 		}
+		
 		.hero-unit {	
 			padding:20px;
 			margin-bottom:30px;
@@ -51,22 +58,38 @@
     </div>
 		
     <div class="hero-unit">
-	<h1>Password Result</h1>
+	<h1><?php echo getXkcdPassword(); ?></h1>
+    </div>
+
+
+<form method="get" action="/">
+    <div class="row">
+      <div class="col-lg-12">
+        <button type="button" class="btn btn-info btn-lg btn-block">GENERATE PASSWORD</button>
+      </div>
     </div>
 
     <div class="row">
       <div class="col-lg-12">
         <div class="panel panel-default" style="margin-top:25px;">
           <div class="panel-heading">
-            <h2 class="panel-title">Blah blah</h2>
+            <h2 class="panel-title">Options</h2>
           </div>
           <div class="panel-body">
-	  blah blah
+              <div class="form-group">
+                <div class="checkbox">
+                  <label><input type="checkbox"> Add a Number</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox"> Add a Symbol</label>
+                </div>
+              </div>
+
           </div>
         </div>
       </div>
     </div>
-
+</form>
 
 	</div>
 	
