@@ -84,19 +84,19 @@
               <div class="col-xs-4">
                 <label class="col-xs-12 control-label" for="formGroupInputLarge">Number of Words (Max 7)</label>
                 <div class="col-xs-12">
-                  <input type="text" class="form-control" name="numOfWords" value="<?php echo (isset($_GET['numOfWords']) ? $_GET['numOfWords']:'4'); ?>">
+                  <input type="text" class="form-control" name="numOfWords" maxlength="1" placeholder="Enter a number, default is 4" value="<?php echo (isset($_GET['numOfWords']) ? $_GET['numOfWords']:null); ?>">
                 </div>
               </div>
               <div class="col-xs-4">
                 <label class="col-xs-12 control-label" for="formGroupInputLarge">Include a Special Character</label>
                 <div class="col-xs-12">
-                  <input <input type="text" class="form-control" name="addSpecialChar" value="<?php echo (isset($_GET['addSpecialChar']) ? $_GET['addSpecialChar']:null); ?>">
+                  <input <input type="text" class="form-control" name="addSpecialChar" maxlength="1" placeholder="i.e. %, ^, $, #, @" value="<?php echo (isset($_GET['addSpecialChar']) ? $_GET['addSpecialChar']:null); ?>">
                 </div>
               </div>
               <div class="col-xs-4">
                 <label class="col-xs-12 control-label" for="formGroupInputLarge">Delimiter between words</label>
                 <div class="col-xs-12">
-                  <input <input type="text" class="form-control" name="delimiter" value="<?php echo (isset($_GET['delimiter']) ? $_GET['delimiter']:'-'); ?>">
+                  <input <input type="text" class="form-control" name="delimiter" maxlength="1" placeholder="Enter a character, default is '-'" value="<?php echo (isset($_GET['delimiter']) ? $_GET['delimiter']:null); ?>">
                 </div>
               </div>
             </div>
