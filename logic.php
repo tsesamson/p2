@@ -45,7 +45,13 @@
     //For loop to generate the password
     for($i = 0; $i <$numOfWords; $i++) {
         $randNum = rand(0, count($dic));
-        $result .= $dic[$randNum];
+        
+        //Determine if proper case option is selected then add random word to result
+        if(isset($_GET['isProperCase']) || $isProperCase) {
+          $result .= ucwords($dic[$randNum]);
+        } else {
+          $result .= $dic[$randNum];
+        }
         
         //Don't add delimiter if it is the last word
         if($i < $numOfWords -1) {
@@ -59,7 +65,7 @@
     }
     
     //Add a random number if that option is selected
-    if(isset($_GET['addNum'])) {
+    if(isset($_GET['addNum']) || $addNum) {
       $result = addNum($result);
     }
     

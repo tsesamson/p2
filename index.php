@@ -103,12 +103,12 @@
             <div class="row">
               <div class="col-xs-4">
                 <div class="checkbox">
-                  <label><input type="checkbox" name="addNum" <?php echo (isset($_GET['addNum'])  ? 'checked':''); ?>> Add a Number</label>
+                  <label><input type="checkbox" name="addNum" <?php echo (isset($_GET['addNum'])  ? 'checked':''); ?>> Add a random number (0-9)</label>
                 </div>
               </div>
               <div class="col-xs-4">
                 <div class="checkbox">
-                  <label><input type="checkbox" name="addSym" <?php echo (isset($_GET['addSym'])  ? 'checked':''); ?>> Add a Symbol</label>
+                  <label><input type="checkbox" name="addSym" <?php echo (isset($_GET['addSym'])  ? 'checked':''); ?>> Add a random special character</label>
                 </div>
               </div>
               <div class="col-xs-4">
