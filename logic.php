@@ -64,6 +64,11 @@
       $result = addSpecialChar($result, $addSpecialChar);
     }
     
+    //Add a special character if that option is selected
+    if(isset($_GET['addSym']) || $addSym) {
+      $result = addRandomSpecialChar($result);
+    }
+    
     //Add a random number if that option is selected
     if(isset($_GET['addNum']) || $addNum) {
       $result = addNum($result);
@@ -74,6 +79,15 @@
 
   //Function used to add special char in a random spot of the result string
   function addSpecialChar($inputString, $specialChar) {
+    $randSpot = rand(0, strlen($inputString));
+    
+    return substr($inputString, 0, $randSpot) . $specialChar . substr($inputString, $randSpot, strlen($inputString));
+  }
+  
+  //Function used to add random special char from an array then inject it at a random spot of the result string
+  function addRandomSpecialChar($inputString) {
+    $charList = array('~','!','@','#','$','%','^','&','*','(',')','_','+','=','[',']','{','}','|','?','/');
+    $specialChar = $charList[rand(0,count($charList)-1)];
     $randSpot = rand(0, strlen($inputString));
     
     return substr($inputString, 0, $randSpot) . $specialChar . substr($inputString, $randSpot, strlen($inputString));
