@@ -58,14 +58,27 @@
       $result = addSpecialChar($result, $addSpecialChar);
     }
     
+    //Add a random number if that option is selected
+    if(isset($_GET['addNum'])) {
+      $result = addNum($result);
+    }
+    
     return $result;
   }
 
   //Function used to add special char in a random spot of the result string
   function addSpecialChar($inputString, $specialChar) {
-    $randNum = rand(0, strlen($inputString));
+    $randSpot = rand(0, strlen($inputString));
     
-    return substr($inputString, 0, $randNum) . $specialChar . substr($inputString, $randNum, strlen($inputString));
+    return substr($inputString, 0, $randSpot) . $specialChar . substr($inputString, $randSpot, strlen($inputString));
+  }
+  
+  //Function to randomly select a number from 0-9 then add it to a random spot in the result string
+  function addNum($inputString) {
+    $randNum = rand(0, 9);
+    $randSpot = rand(0, strlen($inputString));
+    
+    return substr($inputString, 0, $randSpot) . $randNum . substr($inputString, $randSpot, strlen($inputString));
   }
 
 ?>
