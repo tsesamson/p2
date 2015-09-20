@@ -123,6 +123,14 @@
     </div>
 </form>
 
+    <!-- Image from xkcd.com -->
+    <div class="row">
+      <div class="col-xs-12">
+        For more information check out <a href="http://xkcd.com/936/">xkcd passworth strength</a>.<br/><br/>
+        <a href="http://xkcd.com/936/"><img src="http://imgs.xkcd.com/comics/password_strength.png" /></a>
+      </div>
+    </div>
+
 	</div>
 	
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
