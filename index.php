@@ -123,10 +123,19 @@
     </div>
 </form>
 
-    <!-- Image from xkcd.com -->
+    <!-- What is xkcd password? -->
     <div class="row">
       <div class="col-xs-12">
-        For more information check out <a href="http://xkcd.com/936/">xkcd passworth strength</a>.<br/><br/>
+        <h2>What is xkcd password?</h2>
+        We were taught traditionally that the harder it is for a password to be remembered by a human, the harder it will be for a machine to crack. However, that notion is simply not true. As you can see from the comic below, it showing you that the password "Tr0ub4dor&3" is technically much easier for a machine to crack than the password "correcthorsebatterystaple". On top of that, the latter password has a much better chance for a human to remember successfully. This claim can be justify by running calcuations on the <a href="https://en.wikipedia.org/wiki/Entropy_(information_theory)">entropy</a> for each of the password stated. Our generator above challenges the idea that the harder it is to remember a password, the safer it will be against cracking software. It doesn't have to be that way and this xkcd password generator can help you create much stronger passwords that you can also remember.
+        <br/><br/>
+        For more information check out <a href="http://xkcd.com/936/">xkcd passworth strength</a>.
+      </div>
+    </div>
+
+    <!-- Image from xkcd.com -->
+    <div class="row" style="padding-top:25px;">
+      <div class="col-xs-12">
         <a href="http://xkcd.com/936/"><img src="http://imgs.xkcd.com/comics/password_strength.png" /></a>
       </div>
     </div>

@@ -15,7 +15,7 @@
     $result = ''; //Define varibale for password result
     $dic = getDict();
     $maxLength = 7;
-    
+
     //Check to see if this is a form submit request
     if (!empty($_GET))
     {
