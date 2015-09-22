@@ -82,21 +82,21 @@
           <div class="panel-body">
             <div class="row">
               <div class="col-xs-4">
-                <label class="col-xs-12 control-label" for="formGroupInputLarge">Number of Words (Max 7)</label>
+                <label class="col-xs-12 control-label">Number of Words (Max 7)</label>
                 <div class="col-xs-12">
                   <input type="text" class="form-control" name="numOfWords" maxlength="1" placeholder="Enter a number, default is 4" value="<?php echo (isset($_GET['numOfWords']) ? $_GET['numOfWords']:null); ?>">
                 </div>
               </div>
               <div class="col-xs-4">
-                <label class="col-xs-12 control-label" for="formGroupInputLarge">Include a Special Character</label>
+                <label class="col-xs-12 control-label">Include a Special Character</label>
                 <div class="col-xs-12">
-                  <input <input type="text" class="form-control" name="addSpecialChar" maxlength="1" placeholder="i.e. %, ^, $, #, @" value="<?php echo (isset($_GET['addSpecialChar']) ? $_GET['addSpecialChar']:null); ?>">
+                  <input type="text" class="form-control" name="addSpecialChar" maxlength="1" placeholder="i.e. %, ^, $, #, @" value="<?php echo (isset($_GET['addSpecialChar']) ? $_GET['addSpecialChar']:null); ?>">
                 </div>
               </div>
               <div class="col-xs-4">
-                <label class="col-xs-12 control-label" for="formGroupInputLarge">Delimiter between words</label>
+                <label class="col-xs-12 control-label">Delimiter between words</label>
                 <div class="col-xs-12">
-                  <input <input type="text" class="form-control" name="delimiter" maxlength="1" placeholder="Enter a character, default is '-'" value="<?php echo (isset($_GET['delimiter']) ? $_GET['delimiter']:null); ?>">
+                  <input type="text" class="form-control" name="delimiter" maxlength="1" placeholder="Enter a character, default is '-'" value="<?php echo (isset($_GET['delimiter']) ? $_GET['delimiter']:null); ?>">
                 </div>
               </div>
             </div>
@@ -127,7 +127,7 @@
     <div class="row">
       <div class="col-xs-12">
         <h2>What is xkcd password?</h2>
-        We were taught traditionally that the harder it is for a password to be remembered by a human, the harder it will be for a machine to crack. However, that notion is simply not true. As you can see from the comic below, it showing you that the password "Tr0ub4dor&3" is technically much easier for a machine to crack than the password "correcthorsebatterystaple". On top of that, the latter password has a much better chance for a human to remember successfully. This claim can be justify by running calcuations on the <a href="https://en.wikipedia.org/wiki/Entropy_(information_theory)">entropy</a> for each of the password stated. Our generator above challenges the idea that the harder it is to remember a password, the safer it will be against cracking software. It doesn't have to be that way and this xkcd password generator can help you create much stronger passwords that you can also remember.
+        We were taught traditionally that the harder it is for a password to be remembered by a human, the harder it will be for a machine to crack. However, that notion is simply not true. As you can see from the comic below, it showing you that the password "Tr0ub4dor&amp;3" is technically much easier for a machine to crack than the password "correcthorsebatterystaple". On top of that, the latter password has a much better chance for a human to remember successfully. This claim can be justify by running calcuations on the <a href="https://en.wikipedia.org/wiki/Entropy_(information_theory)">entropy</a> for each of the password stated. Our generator above challenges the idea that the harder it is to remember a password, the safer it will be against cracking software. It doesn't have to be that way and this xkcd password generator can help you create much stronger passwords that you can also remember.
         <br/><br/>
         For more information check out <a href="http://xkcd.com/936/">xkcd passworth strength</a>.
       </div>
@@ -136,7 +136,7 @@
     <!-- Image from xkcd.com -->
     <div class="row" style="padding-top:25px;">
       <div class="col-xs-12">
-        <a href="http://xkcd.com/936/"><img src="http://imgs.xkcd.com/comics/password_strength.png" /></a>
+        <a href="http://xkcd.com/936/"><img src="http://imgs.xkcd.com/comics/password_strength.png" alt="xkcd password comic" /></a>
       </div>
     </div>
 
